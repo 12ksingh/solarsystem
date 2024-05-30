@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body{
+        background-color: black;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        .universe{
+            height: 700px;
+            width: 700px;
+            /* border: 2px solid white; */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .orbit{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 85%;
+            height: 85%;
+            position: relative;
+            border: 2px solid white;
+            border-radius: 50%;
+            transition: 300s;
+            transform: rotate(0);
+            animation: solar 300s linear infinite;
+        }
+        /* .universe:hover .orbit{
+            transform: rotate(360deg);
+        } */
+        .planet{
+            position: absolute;
+            height:20px ;
+            width: 20px;
+            border-radius: 50%;
+            top:-11px;
+        }
+        @keyframes solar{
+            0%{
+                transform: rotate(0);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .sun{
+            height: 50%;
+            width: 50%;
+            border-radius: 50%;
+            transition: 100s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<div class="universe">
+    <div class="orbit">
+        <div class="planet" style="background-color: gray; 
+        box-shadow: 0 0 10px gray;">
+        </div>
+        <div class="orbit" style="transform: rotate(30deg);">
+        <div class="planet" style="background-color: lightcoral;box-shadow: 0 0 15px lightcoral;">
+        </div>
+        <div class="orbit" style="transform: rotate(10deg);">
+        <div class="planet" style="background-color:lightgreen ;box-shadow: 0 0 15px lightgreen;">
+        </div>
+        <div class="orbit" style="transform: rotate(35deg);">
+        <div class="planet" style="background-color:lightgrey ;box-shadow: 0 0 15px lightgrey;">
+        </div>
+        <div class="orbit" style="transform: rotate(60deg);">
+        <div class="planet" style="box-shadow: 0 0 15px lightblue;">
+            <img src="Earth_Western_Hemisphere_transparent_background.png" height="100%" width="100%" alt="">
+        </div>
+        <div class="orbit" style="height: 75%; width: 75%; transform: rotate(12deg)">
+        <div class="planet" style="background-color:lightseagreen ;box-shadow: 0 0 15px lightseagreen;">
+        </div>
+        <div class="orbit"style="height: 75%; width: 75%; transform: rotate(85deg);">
+        <div class="planet" style="background-color:lightslategrey ;box-shadow: 0 0 15px lightslategrey;">
+        </div>
+        <div class="sun">
+            <img src="sun.png" height="100% " width="100%" alt="">
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</div>
+    
+</body>
+</html>
